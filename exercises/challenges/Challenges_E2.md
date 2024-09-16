@@ -1,11 +1,11 @@
 # Challenging Exercises Lecture 2 
+
 > This file contain **challenging exercises** that test knowledge on the following topics:
 > * Code blocks
 > * If/Else & elseif
 > * Switch cases
 > * For, while and do-while loops
 > * Branching statements  
-
 > It's not meant to be standard, quickly solvable exercises, may introduce new topics and invite you to expand beyond what is explicity mentioned during lectures. 
 
 ## C2.1 - Nested loops  
@@ -18,12 +18,14 @@
 >a. `Implement a nested loop structure that simulates a multiplication table from 1 to 10.`  
 >b. `Write a nested loop to generate the following pyramid pattern (up to 5 rows):`  
 >```
->        1  
->      1 2 1  
->    1 2 3 2 1  
->  1 2 3 4 3 2 1  
-> 1 2 3 4 5 4 3 2 1  
+>        1
+>      1 2 1
+>    1 2 3 2 1
+>  1 2 3 4 3 2 1
+>1 2 3 4 5 4 3 2 1
 > ```
+
+
 >c. > **This one is a tough challenge, proceed at your own demise, you have been warned.**   
 `Print a` [Triforce](https://en.wikipedia.org/wiki/Triforce) `to the terminal using loops.`   
 >Example output of a decent Triforce:
