@@ -1,5 +1,5 @@
 package labs.lab1.controller;
 
-public class GameController {
+public abstract class GameController {
     
 }
