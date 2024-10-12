@@ -1,5 +1,18 @@
 package labs.lab1.model;
+import java.util.Random;
 
-public class Die {
-    
+class Die {
+    private int sides;
+    private Random random;
+    private int value;
+    public Die(int sides) {
+        this.sides = sides;
+        this.random = new Random();
+    }
+    public void roll() {
+        value = random.nextInt(sides);
+    }
+    public int getValue() {
+        return value;
+    }
 }
