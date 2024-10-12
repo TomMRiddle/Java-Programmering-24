@@ -27,15 +27,20 @@ public class Player {
     public int getDieValue() {
         int total = 0;
         for(Die die : dice) {
-            total += die.getValue();
+            total += die.getDieValue();
         }
         return total;
     }
+    
     public void increaseScore() {
         score++;
     }
 
     public int getScore() {
         return score;
+    }
+
+    public String getName() {
+        return name;
     }
 }
