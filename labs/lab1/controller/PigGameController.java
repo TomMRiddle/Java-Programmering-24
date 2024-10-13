@@ -9,8 +9,8 @@ public class PigGameController implements GameController {
         
     }
     
-    public Player[] initialize() {
-        return players;
+    public initialize() {
+        
     }
 
     public void takeTurn() {

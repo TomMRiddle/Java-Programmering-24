@@ -8,16 +8,15 @@ public class DiceGameController implements GameController {
     private boolean isGameOver;
 
     public DiceGameController() {
-        players = initialize();
+        initialize();
         while(!isGameOver) {
             //game type logic goes here
         }
     }
 
-    public Player[] initialize() {
-        players[0] = Player(GameView.getPlayerName(), GameView.getSides());
+    private initialize() {
+        players[0] = new Player(GameView.getPlayerName(), GameView.getSides());
         rounds = GameView.getRounds();
-        return players;
     }
 
     public void takeTurn() {

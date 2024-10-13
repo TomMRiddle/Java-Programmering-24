@@ -8,8 +8,8 @@ public class MultiplayerDiceGameController implements GameController {
 
     }
     
-    public Player[] initialize() {
-        return players;
+    public initialize() {
+
     }
 
     public void takeTurn() {

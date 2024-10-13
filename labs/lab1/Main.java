@@ -1,11 +1,9 @@
 package labs.lab1;
 import labs.lab1.controller.*;
 import java.util.Scanner;
-import labs.lab1.helpers.GameFactory;
 
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
-    private static GameController game;
     public static void main(String[] args) {
         System.out.println("Choose gametype");
         System.out.println("1. Dice game");
