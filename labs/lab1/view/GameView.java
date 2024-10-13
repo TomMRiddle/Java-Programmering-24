@@ -57,12 +57,12 @@ public class GameView {
     }
 
     public static void printDieRollAndTempScore(Player player) {
-        System.out.println("\nPlayer " + player.getName() + " rolled " + player.getDieValue());
-        System.out.println("\nYour total score for this turn is " + player.getTempScore());
+        System.out.println("\n" + player.getName() + " rolled " + player.getDieValue());
+        System.out.println("\nYour score for this turn is " + player.getTempScore());
     }
 
     public static void printTurnResult(Player player, boolean correct) {
-        System.out.println("\nPlayer " + player.getName() + " rolled " + player.getDieValue());
+        System.out.println("\n" + player.getName() + " rolled " + player.getDieValue());
         if(correct) {
             System.out.println("Your new total score is " + player.getScore());
         } else {
