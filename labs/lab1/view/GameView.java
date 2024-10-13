@@ -21,8 +21,8 @@ public class GameView {
     }
 
     public static String[] getPlayerNames() {
-        System.out.println("\nEnter the number of players");
-        String[] playerNames = new String[scanner.nextInt()];
+        System.out.println("\nEnter the number of players, (2 is minimum):");
+        String[] playerNames = new String[(Math.max(scanner.nextInt(),2)];
         for(int i = 0; i < playerNames.length; i++) {
             System.out.println("PLAYER " + (i + 1));
             playerNames[i] = getPlayerName();
