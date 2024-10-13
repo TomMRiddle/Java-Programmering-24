@@ -10,9 +10,11 @@ class Die {
         this.sides = sides;
         this.random = new Random();
     }
+
     public void roll() {
         value = random.nextInt(sides) + 1;
     }
+
     public int getDieValue() {
         return value;
     }

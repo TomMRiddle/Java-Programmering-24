@@ -1,27 +1,57 @@
 package labs.lab1.view;
 import labs.lab1.model.Player;
-
 import java.util.Scanner;
 
-class DiceGameView {
+public class DiceGameView {
     private Scanner scanner;
+    private static DiceGameView singleton;
 
-    public DiceGameView() {
+    private DiceGameView() {
         scanner = new Scanner(System.in);
     }
 
+    public static DiceGameView getInstance() {
+        if(singleton == null) {
+            singleton = new DiceGameView();
+        }
+        return singleton;
+    }
+    
     public void printWelcomeMessage() {
         System.out.println("Welcome to the Dice Game!");
     }
 
-    public int getPlayerChoice(int guessedNumber) {
-        System.out.println("Guess what the die roll result will be:");
+    public int getRounds() {
+        System.out.println("Enter the number of rounds:");
+        return scanner.nextInt();
+    }
+    public int getSides() {
+        System.out.println("Enter the number sides on the die:");
         return scanner.nextInt();
     }
 
-    public String getUserName() {
+    public String getPlayerName() {
         System.out.println("Enter your name:");
         return scanner.next();
+    }
+
+    public String[] getPlayerNames(int numberOfPlayers) {
+        String[] playerNames = new String[numberOfPlayers];
+        for(int i = 0; i < playerNames.length; i++) {
+            System.out.println("PLAYER " + i);
+            playerNames[i] = getPlayerName();
+        }
+        return playerNames;
+    }
+
+    public int getNumberOfDice() {
+        System.out.println("Enter number of dice:");
+        return scanner.nextInt();
+    }
+
+    public int getPlayerChoice() {
+        System.out.println("Guess what the die roll result will be:");
+        return scanner.nextInt();
     }
 
     public void printTurnResult(Player player, boolean correct) {
@@ -33,15 +63,9 @@ class DiceGameView {
         }
     }
 
-    public void printWinner(Player[] players) {
-        if(players.length > 1 ) {
-            System.out.println("We have a tie! The  winners are:");
-        } else {
-            System.out.println("The winner is:");
-        }
-        for(Player player : players) {
-            System.out.println(player.getName());
-        }
+    public void printWinner(Player player) {
+        System.out.println("The final score is:");
+        System.out.println(player.getName() + ": " + player.getScore() + " points");
     }
 }
 
