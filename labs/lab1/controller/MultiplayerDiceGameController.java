@@ -1,9 +1,7 @@
 package labs.lab1.controller;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import exercises.solutions.E5.library.Book;
 import labs.lab1.model.Player;
 import labs.lab1.view.GameView;
 

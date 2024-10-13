@@ -40,6 +40,27 @@ public class GameView {
         return scanner.nextInt();
     }
 
+    public static boolean getEndTurn() {
+        System.out.println("Do you want to end your turn?");
+        System.out.println("1. yes, I am too big a coward to roll again");
+        System.out.println("2. no, roll again");
+        while(true) {
+            switch (scanner.nextInt()) {
+                case 1:
+                    return false;
+                case 2:
+                    return true;
+                default:
+                    System.out.println("You need to enter a valid option");
+            }
+        }
+    }
+
+    public static void printDieRollAndTempScore(Player player) {
+        System.out.println("\nPlayer " + player.getName() + " rolled " + player.getDieValue());
+        System.out.println("\nYour total score for this turn is " + player.getTempScore());
+    }
+
     public static void printTurnResult(Player player, boolean correct) {
         System.out.println("\nPlayer " + player.getName() + " rolled " + player.getDieValue());
         if(correct) {

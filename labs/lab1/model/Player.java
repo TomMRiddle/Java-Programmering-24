@@ -4,10 +4,12 @@ public class Player {
     private String name;
     private int score;
     private Die[] dice;
+    private int tempScore;
 
     public Player(String name, int sides) {
         this.name = name;
         score = 0;
+        tempScore = 0;
         dice = new Die[1];
         addDie(1, sides);
     }
@@ -15,6 +17,7 @@ public class Player {
     public Player(String name, int numberOfDice, int sides) {
         this.name = name;
         score = 0;
+        tempScore = 0;
         dice = new Die[numberOfDice];
         addDie(numberOfDice, sides);
     }
@@ -26,7 +29,7 @@ public class Player {
     }
 
     private void addDie(int numberOfDice, int sides) {
-        for(int i=0;i < numberOfDice;i++) {
+        for(int i = 0; i < numberOfDice; i++) {
             dice[i] = new Die(sides);
         }
     }
@@ -51,7 +54,21 @@ public class Player {
         return score;
     }
 
+    public int getTempScore() {
+        return tempScore;
+    }
+    
     public String getName() {
         return name;
+    }
+
+    public void addToTempScore() {
+        tempScore += getDieValue();
+    }
+    public void resetTempScore() {
+        tempScore = 0;
+    }
+    public void addTempScoreToTotal() {
+        score += tempScore;
     }
 }
