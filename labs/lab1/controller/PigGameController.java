@@ -2,7 +2,7 @@ package labs.lab1.controller;
 
 import labs.lab1.model.Player;
 
-public class PigGameController implements GameController {
+public class PigGameController {
     private Player[] players;
     
     public PigGameController() {

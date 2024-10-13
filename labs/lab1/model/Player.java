@@ -38,9 +38,13 @@ public class Player {
         }
         return total;
     }
-    
+
     public void increaseScore() {
         score++;
+    }
+
+    public void addDiceToScore() {
+        score += getDieValue();
     }
 
     public int getScore() {
