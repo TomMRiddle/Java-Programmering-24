@@ -3,39 +3,31 @@ import labs.lab1.model.Player;
 import java.util.Scanner;
 
 public class GameView {
-    private Scanner scanner;
-    private static GameView singleton;
+    private static Scanner scanner;
 
-    private GameView() {
+    public GameView() {
         scanner = new Scanner(System.in);
     }
-
-    public static GameView getInstance() {
-        if(singleton == null) {
-            singleton = new GameView();
-        }
-        return singleton;
-    }
     
-    public void printWelcomeMessage() {
+    public static void printWelcomeMessage() {
         System.out.println("Welcome to the Dice Game!");
     }
 
-    public int getRounds() {
+    public static int getRounds() {
         System.out.println("Enter the number of rounds:");
         return scanner.nextInt();
     }
-    public int getSides() {
+    public static int getSides() {
         System.out.println("Enter the number of sides on the die:");
         return scanner.nextInt();
     }
 
-    public String getPlayerName() {
+    public static String getPlayerName() {
         System.out.println("Enter your name:");
         return scanner.next();
     }
 
-    public String[] getPlayerNames(int numberOfPlayers) {
+    public static String[] getPlayerNames(int numberOfPlayers) {
         String[] playerNames = new String[numberOfPlayers];
         for(int i = 0; i < playerNames.length; i++) {
             System.out.println("PLAYER " + i);
@@ -44,17 +36,17 @@ public class GameView {
         return playerNames;
     }
 
-    public int getNumberOfDice() {
+    public static int getNumberOfDice() {
         System.out.println("Enter number of dice:");
         return scanner.nextInt();
     }
 
-    public int getPlayerChoice() {
+    public static int getPlayerChoice() {
         System.out.println("Guess what the die roll result will be:");
         return scanner.nextInt();
     }
 
-    public void printTurnResult(Player player, boolean correct) {
+    public static void printTurnResult(Player player, boolean correct) {
         System.out.println("Player " + player.getName() + " rolled " + player.getDieValue());
         if(correct) {
             System.out.println("Congratulations, you scored! Your new total score is " + player.getScore());
@@ -63,7 +55,7 @@ public class GameView {
         }
     }
 
-    public void printWinner(Player player) {
+    public static void printWinner(Player player) {
         System.out.println("The final score is:");
         System.out.println(player.getName() + ": " + player.getScore() + " points");
     }

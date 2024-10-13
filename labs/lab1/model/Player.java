@@ -5,6 +5,13 @@ public class Player {
     private int score;
     private Die[] dice;
 
+    public Player(String name, int sides) {
+        this.name = name;
+        score = 0;
+        dice = new Die[1];
+        addDie(1, sides);
+    }
+
     public Player(String name, int numberOfDice, int sides) {
         this.name = name;
         score = 0;
