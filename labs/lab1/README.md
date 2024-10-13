@@ -23,5 +23,5 @@ Man kan i stort sett förstå hur allt hänger ihop för en given speltyp genom 
 
 Sammanfattningsvis kan man säga att jag hade större ambitioner än vad som fanns möjlighet till och att jag skapade onödig komplexitet som jag sedan tog bort allt eftersom spelen växte fram. Det känns lite som att jag gått baklänges i omstruktureringen, det tog lång planering och jag hade stora planer. Nästa gång ska jag ägna mer tid åt omstrukturering än planering, så vida inte uppgiften kräver något annat.
 
-## Användning av AI
+## Fullständig offentliggörande om användning av AI
 Jag har gjort en del webbsökningar för att läsa om olika metoder och design-mönster. Jag har även under tiden jag utvecklat återkommande frågat en LLM (qwen2.5-coder via ollama som körts lokalt på datorn) för att förstå olika delar innan jag gjort vägval. AI-chat-modellen har genererat exempelkod som varit som ett stöd för att förstå olika resonemang. Inte en enda rad har kopierats eller exakt skrivits av från konversationen med AI:n.
