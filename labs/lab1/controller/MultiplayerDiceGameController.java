@@ -8,7 +8,7 @@ public class MultiplayerDiceGameController implements GameController {
 
     }
     
-    public initialize() {
+    public void initialize() {
 
     }
 

@@ -3,11 +3,7 @@ import labs.lab1.model.Player;
 import java.util.Scanner;
 
 public class GameView {
-    private static Scanner scanner;
-
-    public GameView() {
-        scanner = new Scanner(System.in);
-    }
+    private static Scanner scanner = new Scanner(System.in);
     
     public static void printWelcomeMessage() {
         System.out.println("Welcome to the Dice Game!");

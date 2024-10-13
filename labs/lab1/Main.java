@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Main {
     private static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println("Choose gametype");
-        System.out.println("1. Dice game");
-        System.out.println("2. Multiplayer game");
-        System.out.println("3. Pig game");
-        System.out.println("4. Exit");
         boolean gameloop = true;
         while(gameloop) {
+            System.out.println("Choose gametype");
+            System.out.println("1. Dice game");
+            System.out.println("2. Multiplayer game");
+            System.out.println("3. Pig game");
+            System.out.println("4. Exit");
             switch (scanner.nextInt()) {
                 case 1:
                     new DiceGameController();
